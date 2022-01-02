@@ -35,3 +35,25 @@ We provide a pre-trained model which name is model.pkl , you can just use it to 
 You should just download the dataset from the link provided above, and unzip it , then you should just place the folder into the folder you place the code. You should first run preprocess.py and then Main.py.
 
 你可以在上文提供的链接里面下载数据集，将其解压，放到你放代码的文件夹中。你应该首先运行preprocess.py，然后运行Main.py.
+
+`generate.py 说明`
+
+这个脚本可以帮助你运行已有的模型
+
+```
+若一个人的 field-value 如下所示
+
+field_values = {
+    'name': 'George Mikell',
+    'birth_name': 'Jurgis Mikelaitis',
+    'birth_date': '4 April 1929 ( age 88 )',
+    'birth_place': 'Bildeniai , Lithuania',
+    'nationality': 'Lithuanian , Australian',
+    'occupation': 'Actor , writer'
+}
+
+我们需要将其个人信息编码成 name:George~Mikell*birth_name:Jurgis~Mikelaitis*birth_date:4~April~1929*birth_place:Bildeniai~,~Lithuania*nationality:Lithuanian~,~Australian*occupation:Actor~,~writer*
+其中 ~ 代表的是空格，* 代表的是每对 field-value 之间的间隔
+然后执行 python generate.py -box name:George~Mikell*birth_name:Jurgis~Mikelaitis*birth_date:4~April~1929*birth_place:Bildeniai~,~Lithuania*nationality:Lithuanian~,~Australian*occupation:Actor~,~writer*
+即可获得其对应的 summary
+```
