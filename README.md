@@ -31,3 +31,7 @@ As the web demo provided by mingk19 is close-sourced, we won't provide its code 
 We provide a pre-trained model which name is model.pkl , you can just use it to test this model.
 
 我们提供了一个名为model.pkl的预训练模型，可用于进行测试。
+
+You should just download the dataset from the link provided above, and unzip it , then you should just place the folder into the folder you place the code. You should first run preprocess.py and then Main.py.
+
+你可以在上文提供的链接里面下载数据集，将其解压，放到你放代码的文件夹中。你应该首先运行preprocess.py，然后运行Main.py.
